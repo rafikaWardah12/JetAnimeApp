@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">JetAnimeApp</string>
+    <string name="scroll_to_top">Scroll to Top</string>
+    <string name="search_hero">Cari pahlawan</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="favorite">Favorite</string>
+    <string name="episode">Episode</string>
+    <string name="description">Description</string>
+    <string name="photo_anime">Photo Anime</string>
+</resources>
