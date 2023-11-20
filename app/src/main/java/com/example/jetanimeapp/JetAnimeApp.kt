@@ -81,9 +81,11 @@ fun JetAnimeApp(
                     }
                 )
             }
+
+//            composable()
         }
     }
-//    val groupAnime =
+    val groupAnime = ""
 //        sortedMapOf(AnimeData.anime)
 }
 
