@@ -8,4 +8,5 @@
     <string name="episode">Episode</string>
     <string name="description">Description</string>
     <string name="photo_anime">Photo Anime</string>
+    <string name="photo_profile">Photo Profile</string>
 </resources>

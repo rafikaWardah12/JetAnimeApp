@@ -105,9 +105,11 @@ fun HomeContent(
 //                items(AnimeData.anime, key = { it.id }) { anime ->
                 items(anime, key = { it.id }) { anime ->
                     AnimeListItem(
+                        modifier = Modifier.fillMaxWidth(), //buat styling
                         name = anime.name,
                         photoUrl = anime.photoUrl,
-                        modifier = Modifier.fillMaxWidth() //buat styling
+                        navigateToDetail = navigateToDetail,
+                        animeId = anime.id
                     )
                 }
             }
@@ -136,10 +138,14 @@ fun AnimeListItem(
     modifier: Modifier = Modifier,
     name: String,
     photoUrl: String,
+    navigateToDetail: (Int) -> Unit,
+    animeId: Int
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier.clickable { }
+        modifier = modifier.clickable {
+            navigateToDetail(animeId)
+        }
     ) {
         AsyncImage(
             model = photoUrl,
@@ -169,7 +175,9 @@ fun AnimeListItemPreview() {
     JetAnimeAppTheme {
         AnimeListItem(
             name = "Eren",
-            photoUrl = "Tidak muncul gambar"
+            photoUrl = "Tidak muncul gambar",
+            animeId = 1,
+            navigateToDetail = {}
         )
     }
 }

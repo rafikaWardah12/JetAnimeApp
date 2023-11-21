@@ -29,6 +29,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.jetanimeapp.Screen.detail.DetailScreen
 import com.example.jetanimeapp.Screen.home.HomeScreen
+import com.example.jetanimeapp.Screen.profile.ProfileScreen
 import com.example.jetanimeapp.navigation.NavigationItem
 import com.example.jetanimeapp.navigation.Screen
 import com.example.jetanimeapp.ui.theme.JetAnimeAppTheme
@@ -52,9 +53,9 @@ fun JetAnimeApp(
         modifier = modifier
     ) { innerPadding ->
         NavHost(
+            modifier = Modifier.padding(innerPadding),
             navController = navController,
             startDestination = Screen.Home.route,
-            modifier = Modifier.padding(innerPadding),
         ) {
             composable(Screen.Home.route) {
                 HomeScreen(
@@ -82,7 +83,9 @@ fun JetAnimeApp(
                 )
             }
 
-//            composable()
+            composable(Screen.Profile.route){
+                ProfileScreen()
+            }
         }
     }
     val groupAnime = ""
